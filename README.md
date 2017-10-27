@@ -34,6 +34,16 @@ drwxr-xr-x. 2 root root   6 Oct 26 22:41 tmp
 * 注意这里建立了一个软链接`logs -> /data/japplog/testPrj`,所以请手动建立`/data/japplog/testPrj`目录并保证目录中有system.log文件
 此软链接的目的是有多个工程的情况下，日志统一集中在`/data/japplog`目录管理，方便查看
 
+### 部署工程
+* 将你的springboot最终的jar包放到`lib`目录下，最终结果如下
+```
+[root@localhost lib]$ pwd
+/usr/local/workspace/testPrj/lib
+[root@localhost lib]$ ll
+total 25696
+-rw-rw-r-- 1 root root 26276100 Oct 26 20:40 weixin-java-mp-springboot-1.0.0.jar
+```
+**接下来回到`service.sh`所在的目录执行`sh service.sh start testPrj`就可以启动工程，然后通过`tail -f /data/japplog/testPrj/system.log`查看启动日志吧**
 
 ### 启动、停止、重启工程
 启动工程
