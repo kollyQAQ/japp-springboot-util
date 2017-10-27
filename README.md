@@ -1,15 +1,21 @@
 ### 快速创建japp springboot工程结构
-
+拷贝本项目的default目录和service.sh文件到你的服务器的准备存放java工程的workspace目录下，效果如下
+```
+[root@localhost workspace]# ll
+total 0
+drwxr-xr-x. 5 root root 83 Oct 25 04:05 default
+-rwxr-xr-x. 5 root root 522 Oct 25 04:05 service.sh
+```
 ### 创建工程
 ```
-[root@localhost japp-springboot-util]# sh service.sh create testPrj
+[root@localhost workspace]# sh service.sh create testPrj
 Please input the owner of this application:root
 New application is created sucessfully!
 Please change default settings!
 ```
 此时会发现已经有了testPrj这个目录，进入看看
 ```
-[root@localhost japp-springboot-util]# cd testPrj/
+[root@localhost workspace]# cd testPrj/
 [root@localhost testPrj]# ll
 total 20
 drwxr-xr-x. 2 root root  80 Oct 26 22:41 bin
